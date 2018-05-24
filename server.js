@@ -41,10 +41,10 @@ const getUserToken = (response, clientID, clientSecret, code) => {
     .then(response => response.json())
     .then(json => {
       console.log(json)
-      return response.redirect('/'); // and add token to a cookie?
+      return response.redirect('/'); // create a session here?
     })
     .catch(err => console.log(err));
-}
+};
 
 app.listen(app.get('port'), () => {
   console.log('Practice OAuth server for GitHub running.');
